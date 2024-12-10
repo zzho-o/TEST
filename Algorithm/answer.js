@@ -50,8 +50,6 @@ const answer = (arr) => {
         for (let i = 0; i < adj_arr[node].length; i++) {
             const nextNode = adj_arr[node][i]
             const edge = `${node}-${nextNode}`
-
-            
             if (!visitedEdges.has(edge) && !visitedEdges.has(`${nextNode}-${node}`)) {
                 visitedEdges.add(edge) // 간선을 아직 방문하지 않았다면 방문후 다시 탐색  
                 dfsPath(nextNode)  
